@@ -17,7 +17,6 @@ export default function Menubar() {
                         <a className="nav-link disabled">Disabled</a>
                     </li>
                 </ul> */}
-
             </div>
         </nav>
     )
