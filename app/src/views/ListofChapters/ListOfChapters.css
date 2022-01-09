@@ -1,0 +1,18 @@
+.rvm-v1-crs-img {
+    height: 140px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.lecturesInList{
+    padding: 0px 20px;
+}
+.lecturesInList:hover{
+    background: rgba(255, 255, 255, 0.616);
+}
+
+.lecturesInListP{
+    font-size: 14px;
+}
+
+
