@@ -1,4 +1,5 @@
 import axios from "axios"
+import { Link } from "react-router-dom"
 import React, { useState, useEffect } from "react"
 import { DetailsOfLecture, Pagination } from "../VideoLessons/VideoLessons"
 import { useParams } from "react-router-dom"
@@ -20,6 +21,8 @@ const Quiz = () => {
     }, [])
 
     if (loading) return (<div className="container mb-3">
+        <p><Link to="/" >All courses</Link> &gt; <Link to="/" >Introduction to Machine Learning</Link> &gt; {quiz?.title} </p>
+        <hr />
         <div className="videoframe" >
             <p className="p-3 mt-5">Loading...!</p>
         </div>
@@ -27,6 +30,8 @@ const Quiz = () => {
     return (
         <>
             <div className="container mb-3" >
+                <p><Link to="/" >All courses</Link> &gt; <Link to="/" >Introduction to Machine Learning</Link> &gt; {quiz?.title} </p>
+                <hr />
                 <div className="videoframe" >
                     <h2 className="mt-5 mb-5">{quiz.title}</h2>
                     <button className="btn btn-success mt-3" >Start Quiz</button>

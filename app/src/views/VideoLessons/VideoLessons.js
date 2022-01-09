@@ -28,6 +28,8 @@ const VideoLessons = () => {
     }, [lessonId])
 
     if (loading) return (<div className="container mb-3">
+        <p><Link to="/" >All courses</Link> &gt; <Link to="/" >Introduction to Machine Learning</Link> &gt; {lectureData?.title} </p>
+        <hr />
         <div className="videoframe" >
             <p className="p-3 mt-5">Loading...!</p>
         </div>

@@ -12,17 +12,15 @@ function App() {
     <>
       <Router>
         <div className='row w-100'>
-          <div className='col-3'>
-            <Sidebar height={"100vh"} />
-          </div>
-          <div className='col-9'>
+          <Sidebar height={"100vh"} />
+          <div style={{ width: "100%", paddingLeft: "270px"}}>
             <Menubar />
             <Switch>
               <Route exact path="/videos/chapter-:chapterId/lesson-:lessonId">
                 <VideoLessons />
               </Route>
               <Route exact path="/videos/chapter-:chapterId/quiz-:quizId">
-                <Quiz  />
+                <Quiz />
               </Route>
               <Route exact path="/">
                 <ListOfChapters />
