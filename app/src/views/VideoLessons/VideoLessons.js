@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation, useParams, Redirect, useHistory } from 'react-router-dom';
+import { useLocation, useParams, Redirect, useHistory, Link } from 'react-router-dom';
 import axios from "axios";
 import string from "../../urlForBackend";
 import './VideoLessons.css'
@@ -27,8 +27,11 @@ const VideoLessons = () => {
         getSpecificLectureDetails();
     }, [lessonId])
 
-
-    if (loading) return <p className="p-3">Loading...!</p>
+    if (loading) return (<div className="container mb-3">
+        <div className="videoframe" >
+            <p className="p-3 mt-5">Loading...!</p>
+        </div>
+    </div>)
     return (
         <>
             <div className="container mb-3">
@@ -103,7 +106,8 @@ const Pagination = () => {
         for (let i = 0; i < list.length; i++) {
             if (list[i] === currPath) {
                 console.log("List[i] : ", list[i], " and currPath : ", currPath, " so the prev one is : ", list[i - 1]);
-                history.push(`/videos${list[i - 1]}`);
+                // history.push(`/videos${list[i - 1]}`);
+                return `/videos${list[i - 1]}`
             }
         }
     }
@@ -115,7 +119,8 @@ const Pagination = () => {
         for (let i = 0; i < list.length; i++) {
             if (list[i] === currPath) {
                 console.log("List[i] : ", list[i], " and currPath : ", currPath, " so the prev one is : ", list[i + 1]);
-                history.push(`/videos${list[i + 1]}`);
+                // history.push(`/videos${list[i + 1]}`);
+                return `/videos${list[i + 1]}`
             }
         }
     }
@@ -127,12 +132,20 @@ const Pagination = () => {
     return (
         <div className="topic-head">
             <ul>
-                <li style={{ cursor: "pointer" }} onClick={prev}>
-                    Previous
+                <li style={{ cursor: "pointer" }}
+                // onClick={prev}
+                >
+                    <Link to={prev}>
+                        Previous
+                    </Link>
                 </li>
                 <li><p>{curr()}/{list.length}</p></li>
-                <li style={{ cursor: "pointer" }} onClick={next}>
-                    Next
+                <li style={{ cursor: "pointer" }}
+                //  onClick={next}
+                >
+                    <Link to={next}>
+                        Next
+                    </Link>
                 </li>
             </ul>
         </div>

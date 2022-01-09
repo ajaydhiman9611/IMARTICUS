@@ -19,15 +19,19 @@ const Quiz = () => {
         getQuizData();
     }, [])
 
-    if (loading) return <p className="p-3">Loading...!</p>
+    if (loading) return (<div className="container mb-3">
+        <div className="videoframe" >
+            <p className="p-3 mt-5">Loading...!</p>
+        </div>
+    </div>)
     return (
         <>
             <div className="container mb-3" >
-                <div className="p-5" style={{ textAlign: "center" }}>
-                    <h2>{quiz.title}</h2>
-                    <button className="btn btn-success mt-5">Start the quiz</button>
+                <div className="videoframe" >
+                    <h2 className="mt-5 mb-5">{quiz.title}</h2>
+                    <button className="btn btn-success mt-3" >Start Quiz</button>
                 </div>
-                <DetailsOfLecture style={{ marginTop: "150px" }} data={quiz} />
+                <DetailsOfLecture style={{ marginTop: "20px" }} data={quiz} />
                 <Pagination />
             </div>
         </>
