@@ -39,6 +39,9 @@ const CustomSideBar = () => {
                 </Link>
             </div>
             <ListOfLectures />
+            <br/>
+            <h5 align="center">Get Certificate</h5>
+            <br/>
         </>
     )
 }

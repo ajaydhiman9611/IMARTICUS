@@ -10,10 +10,11 @@ export default function ListOfChapters() {
     return (
         <>
             <div className="container w-75">
+                <small>All courses &gt; Introduction to Machine Learning</small>
+                <hr />
+                <br/>
                 <HeaderChapter />
-                {/* <div className="card shadow-sm p-3 mb-5 bg-body rounded"> */}
                 <ListOfLectures />
-                {/* </div> */}
             </div>
         </>
     )

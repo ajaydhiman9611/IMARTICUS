@@ -35,6 +35,8 @@ const VideoLessons = () => {
     return (
         <>
             <div className="container mb-3">
+                <p><Link to="/" >All courses</Link> &gt; <Link to="/" >Introduction to Machine Learning</Link> &gt; {lectureData?.title} </p>
+                <hr />
                 {Object.keys(lectureData).length > 0
                     ? <div className="videoframe" >
                         <h2 className="mt-5 mb-5">{lectureData.title}</h2>
