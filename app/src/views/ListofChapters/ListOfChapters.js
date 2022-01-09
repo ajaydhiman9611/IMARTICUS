@@ -83,9 +83,9 @@ const List = ({ data, i }) => {
                     <br />
                     <span style={{ fontSize: "14px" }}>
                         {data.lectures?.length} 
-                        {data.lectures?.length > 1 ? "Lectures" : "Lecture"} 
+                        {data.lectures?.length > 1 ? " Lectures" : " Lecture"} 
                         &nbsp;&nbsp; 
-                        {data.quizzes?.length > 0 && (<>{data.quizzes?.length} {data.quizzes?.length > 1 ? "Quizzes" : "Quiz" }</>)}
+                        {data.quizzes?.length > 0 && (<>{data.quizzes?.length} {data.quizzes?.length > 1 ? " Quizzes" : "Quiz" }</>)}
                     </span>
                 </p>
             </Accordion.Header>
