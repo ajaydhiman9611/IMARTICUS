@@ -12,7 +12,7 @@ export const Sidebar = () => {
                 <div className="content" style={{ width: "100%" }}>
                     {pathname === "/"
                         ? <>
-                            <div className="shadow-sm mb-5 bg-body" style={{ padding: "12.5px 0", marginBottom: "40px" }}>
+                            <div className="shadow-sm mb-5 bg-body" style={{ padding: "9px 0", marginBottom: "40px" }}>
                                 <h2 align="center">Menu</h2>
                             </div>
                             <ul className='.sidebarUl'>
