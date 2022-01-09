@@ -9,8 +9,6 @@ const path = require("path");
 const connectDB = require("./db/config.db");
 let routes = require("./routes/index.routes");
 
-
-
 connectDB();
 
 // api endpoints ---------
